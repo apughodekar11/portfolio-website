@@ -1,0 +1,90 @@
+# ============================================
+# GITHUB ACTIONS - AUTO DEPLOY TO AWS
+# ============================================
+# This workflow:
+#   1. Triggers on push to main branch
+#   2. Syncs website files to S3
+#   3. Invalidates CloudFront cache
+#
+# Setup required:
+#   1. Add these secrets to your GitHub repo:
+#      - AWS_ACCESS_KEY_ID
+#      - AWS_SECRET_ACCESS_KEY
+#      - AWS_REGION (e.g., eu-west-1)
+#      - S3_BUCKET (your bucket name)
+#      - CLOUDFRONT_DISTRIBUTION_ID
+
+name: Deploy Portfolio to AWS
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      # Only deploy when website files change
+      - 'index.html'
+      - 'blog.html'
+      - 'css/**'
+      - 'js/**'
+      - 'data/**'
+      - 'assets/**'
+      - '*.pdf'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+env:
+  AWS_REGION: ${{ secrets.AWS_REGION }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      
+      - name: Sync files to S3
+        run: |
+          aws s3 sync . s3://${{ secrets.S3_BUCKET }} \
+            --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "terraform/*" \
+            --exclude "lambda/*" \
+            --exclude "*.md" \
+            --exclude ".gitignore" \
+            --cache-control "public, max-age=31536000" \
+            --metadata-directive REPLACE
+          
+          # Set shorter cache for HTML files (so updates show faster)
+          aws s3 cp s3://${{ secrets.S3_BUCKET }} s3://${{ secrets.S3_BUCKET }} \
+            --recursive \
+            --exclude "*" \
+            --include "*.html" \
+            --cache-control "public, max-age=0, must-revalidate" \
+            --metadata-directive REPLACE
+          
+          # Set shorter cache for JSON data files
+          aws s3 cp s3://${{ secrets.S3_BUCKET }}/data s3://${{ secrets.S3_BUCKET }}/data \
+            --recursive \
+            --cache-control "public, max-age=300" \
+            --metadata-directive REPLACE
+      
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
+      
+      - name: Deployment complete
+        run: |
+          echo "✅ Deployment complete!"
+          echo "🌐 Site: https://${{ secrets.S3_BUCKET }}"

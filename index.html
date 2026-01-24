@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apurva Ghodekar | DevOps Engineer</title>
+    <meta name="description" content="DevOps Engineer & SRE based in Dublin, Ireland. Building scalable cloud infrastructure with AWS, Docker, Terraform, and more.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/contact-footer.css">
+</head>
+<body>
+    <!-- Atmospheric Background -->
+    <div class="bg-atmosphere">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+        <div class="grid-overlay"></div>
+        <div class="noise"></div>
+    </div>
+    <div class="nav-fade"></div>
+    
+    <!-- Navigation -->
+    <div class="nav-wrapper" id="nav-wrapper">
+        <nav>
+            <a href="#home" class="logo">~/apurva</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">home</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#experience">experience</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Let's Talk</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </nav>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu-close" id="mobile-menu-close">&times;</button>
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-container">
+                <div class="hero-left">
+                    <p class="greeting"><span class="wave">👋</span> Hi, I'm</p>
+                    <h1>Apurva Ghodekar</h1>
+                    <div class="title-wrapper">
+                        <span class="typewriter-text" id="typewriter"></span>
+                        <span class="cursor"></span>
+                    </div>
+                    <p class="hero-description">I build and maintain scalable cloud infrastructure, automate deployments, and ensure systems run reliably 24/7. Passionate about DevOps culture and continuous improvement.</p>
+                    <div class="hero-stats">
+                        <div class="stat"><span class="stat-value">99.99%</span><span class="stat-label">Uptime Maintained</span></div>
+                        <div class="stat"><span class="stat-value">10+</span><span class="stat-label">Cloud Deployments</span></div>
+                        <div class="stat"><span class="stat-value">2 Years</span><span class="stat-label">Production Experience</span></div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn-primary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>View Projects</a>
+                        <a href="#contact" class="btn-secondary"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>Get in Touch</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/x23304995-Apurva" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                        <a href="https://www.linkedin.com/in/apurva-ghodekar-b26102198" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                        <a href="mailto:apurva80125@gmail.com" class="social-link" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+                    </div>
+                    <div class="availability-badge"><span class="availability-dot"></span>Available for opportunities in Dublin, Ireland</div>
+                </div>
+                <div class="hero-right">
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons"><span class="terminal-btn red"></span><span class="terminal-btn yellow"></span><span class="terminal-btn green"></span></div>
+                            <span class="terminal-title">apurva@devops:~</span>
+                        </div>
+                        <div class="terminal-body" id="terminal-content"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="skills-section" id="skills">
+            <div class="section-header">
+                <span class="section-label"><span>💻</span> Tech Stack</span>
+                <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Technologies I work with to build scalable, reliable infrastructure and automate everything.</p>
+            </div>
+            <div class="skills-grid">
+                <!-- Cloud Platforms -->
+                <div class="skill-card cloud highlight">
+                    <span class="highlight-badge">Primary</span>
+                    <div class="card-header"><div class="card-icon">☁️</div><h3 class="card-title">Cloud Platforms</h3></div>
+                    <div class="skills-list">
+                        <div class="skill-item"><div class="skill-logo">🔶</div><div class="skill-info"><div class="skill-name">Amazon Web Services</div><div class="skill-detail">EC2, S3, Lambda, Beanstalk</div></div><div class="circular-progress" data-progress="75"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">75%</span></div></div>
+                        <div class="skill-item"><div class="skill-logo">🔷</div><div class="skill-info"><div class="skill-name">Microsoft Azure</div><div class="skill-detail">AZ-104 Certified</div></div><div class="circular-progress" data-progress="60"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">60%</span></div></div>
+                    </div>
+                </div>
+                <!-- Infrastructure -->
+                <div class="skill-card infrastructure">
+                    <div class="card-header"><div class="card-icon">🌐</div><h3 class="card-title">Infrastructure & Web Servers</h3></div>
+                    <div class="skills-list">
+                        <div class="skill-item"><div class="skill-logo">🟢</div><div class="skill-info"><div class="skill-name">NGINX</div><div class="skill-detail">Reverse Proxy, SSL</div></div><div class="circular-progress" data-progress="70"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">70%</span></div></div>
+                        <div class="skill-item"><div class="skill-logo">🪶</div><div class="skill-info"><div class="skill-name">Apache</div><div class="skill-detail">Web Server</div></div><div class="circular-progress" data-progress="45"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">45%</span></div></div>
+                    </div>
+                </div>
+                <!-- Containers -->
+                <div class="skill-card containers">
+                    <div class="card-header"><div class="card-icon">🐳</div><h3 class="card-title">Containers & Orchestration</h3></div>
+                    <div class="skills-list">
+                        <div class="skill-item"><div class="skill-logo">🐋</div><div class="skill-info"><div class="skill-name">Docker</div><div class="skill-detail">Containerization</div></div><div class="circular-progress" data-progress="80"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">80%</span></div></div>
+                        <div class="skill-item"><div class="skill-logo">🐝</div><div class="skill-info"><div class="skill-name">Docker Swarm</div><div class="skill-detail">Orchestration</div></div><div class="circular-progress" data-progress="80"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">80%</span></div></div>
+                    </div>
+                </div>
+                <!-- IaC -->
+                <div class="skill-card iac">
+                    <div class="card-header"><div class="card-icon">🏗️</div><h3 class="card-title">Infrastructure as Code</h3></div>
+                    <div class="skills-list">
+                        <div class="skill-item"><div class="skill-logo">🟪</div><div class="skill-info"><div class="skill-name">Terraform <span class="learning-badge">Learning</span></div><div class="skill-detail">Pursuing Certification</div></div><div class="circular-progress" data-progress="35"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">35%</span></div></div>
+                        <div class="skill-item"><div class="skill-logo">🔴</div><div class="skill-info"><div class="skill-name">Ansible</div><div class="skill-detail">Configuration Mgmt</div></div><div class="circular-progress" data-progress="30"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">30%</span></div></div>
+                    </div>
+                </div>
+                <!-- Scripting -->
+                <div class="skill-card scripting">
+                    <div class="card-header"><div class="card-icon">⌨️</div><h3 class="card-title">Scripting & Programming</h3></div>
+                    <div class="skills-list">
+                        <div class="skill-item"><div class="skill-logo">🐚</div><div class="skill-info"><div class="skill-name">Bash / Shell</div><div class="skill-detail">Automation Scripts</div></div><div class="circular-progress" data-progress="80"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">80%</span></div></div>
+                        <div class="skill-item"><div class="skill-logo">🐍</div><div class="skill-info"><div class="skill-name">Python</div><div class="skill-detail">Automation, Backend</div></div><div class="circular-progress" data-progress="80"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">80%</span></div></div>
+                        <div class="skill-item"><div class="skill-logo">🔵</div><div class="skill-info"><div class="skill-name">Golang <span class="learning-badge">Learning</span></div><div class="skill-detail">CLI Tools</div></div><div class="circular-progress" data-progress="10"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">10%</span></div></div>
+                    </div>
+                </div>
+                <!-- Monitoring -->
+                <div class="skill-card monitoring">
+                    <div class="card-header"><div class="card-icon">📊</div><h3 class="card-title">Monitoring & Observability</h3></div>
+                    <div class="skills-list">
+                        <div class="skill-item"><div class="skill-logo">🔥</div><div class="skill-info"><div class="skill-name">Prometheus</div><div class="skill-detail">Metrics Collection</div></div><div class="circular-progress" data-progress="90"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">90%</span></div></div>
+                        <div class="skill-item"><div class="skill-logo">📈</div><div class="skill-info"><div class="skill-name">Grafana</div><div class="skill-detail">Visualization & Dashboards</div></div><div class="circular-progress" data-progress="90"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">90%</span></div></div>
+                    </div>
+                </div>
+                <!-- Databases -->
+                <div class="skill-card databases">
+                    <div class="card-header"><div class="card-icon">🗄️</div><h3 class="card-title">Databases</h3></div>
+                    <div class="skills-list">
+                        <div class="skill-item"><div class="skill-logo">🐘</div><div class="skill-info"><div class="skill-name">PostgreSQL</div><div class="skill-detail">Relational DB</div></div><div class="circular-progress" data-progress="80"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">80%</span></div></div>
+                        <div class="skill-item"><div class="skill-logo">👁️</div><div class="skill-info"><div class="skill-name">Cassandra</div><div class="skill-detail">NoSQL Distributed</div></div><div class="circular-progress" data-progress="80"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">80%</span></div></div>
+                        <div class="skill-item"><div class="skill-logo">🔴</div><div class="skill-info"><div class="skill-name">Redis</div><div class="skill-detail">Caching</div></div><div class="circular-progress" data-progress="65"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">65%</span></div></div>
+                    </div>
+                </div>
+                <!-- CI/CD -->
+                <div class="skill-card cicd">
+                    <div class="card-header"><div class="card-icon">🔄</div><h3 class="card-title">CI/CD</h3></div>
+                    <div class="skills-list">
+                        <div class="skill-item"><div class="skill-logo">⚡</div><div class="skill-info"><div class="skill-name">GitHub Actions</div><div class="skill-detail">Workflows & Automation</div></div><div class="circular-progress" data-progress="80"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">80%</span></div></div>
+                        <div class="skill-item"><div class="skill-logo">🔶</div><div class="skill-info"><div class="skill-name">AWS CodePipeline</div><div class="skill-detail">CI/CD Pipeline</div></div><div class="circular-progress" data-progress="75"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">75%</span></div></div>
+                    </div>
+                </div>
+                <!-- Linux & Networking -->
+                <div class="skill-card linux">
+                    <div class="card-header"><div class="card-icon">🐧</div><h3 class="card-title">Linux & Networking</h3></div>
+                    <div class="skills-list">
+                        <div class="skill-item"><div class="skill-logo">🖥️</div><div class="skill-info"><div class="skill-name">Linux Administration</div><div class="skill-detail">Ubuntu, CentOS, RHEL</div></div><div class="circular-progress" data-progress="85"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">85%</span></div></div>
+                        <div class="skill-item"><div class="skill-logo">🌐</div><div class="skill-info"><div class="skill-name">Networking</div><div class="skill-detail">TCP/IP, DNS, Firewalls</div></div><div class="circular-progress" data-progress="60"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">60%</span></div></div>
+                    </div>
+                </div>
+                <!-- Security -->
+                <div class="skill-card security">
+                    <div class="card-header"><div class="card-icon">🔒</div><h3 class="card-title">Security</h3></div>
+                    <div class="skills-list">
+                        <div class="skill-item"><div class="skill-logo">🛡️</div><div class="skill-info"><div class="skill-name">Cloud Security</div><div class="skill-detail">IAM, Security Groups, VPC</div></div><div class="circular-progress" data-progress="55"><svg viewBox="0 0 40 40"><circle class="bg-circle" cx="20" cy="20" r="18"></circle><circle class="progress-circle" cx="20" cy="20" r="18"></circle></svg><span class="percentage">55%</span></div></div>
+                    </div>
+                </div>
+                <!-- Certifications -->
+                <div class="skill-card certifications">
+                    <div class="card-header"><div class="card-icon">🏆</div><h3 class="card-title">Certifications</h3></div>
+                    <div class="skills-list">
+                        <div class="cert-item"><div class="cert-logo">🔷</div><div class="cert-info"><div class="cert-name">Azure Administrator (AZ-104)</div><div class="cert-year">2023</div></div><span class="cert-badge completed">✓ Completed</span></div>
+                        <div class="cert-item"><div class="cert-logo">🔷</div><div class="cert-info"><div class="cert-name">Azure Fundamentals (AZ-900)</div><div class="cert-year">2022</div></div><span class="cert-badge completed">✓ Completed</span></div>
+                        <div class="cert-item"><div class="cert-logo">🟪</div><div class="cert-info"><div class="cert-name">HashiCorp Terraform Associate</div><div class="cert-year">2025</div></div><span class="cert-badge progress">In Progress</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section class="experience-section" id="experience">
+            <div class="section-header">
+                <span class="section-label"><span>💼</span> Career Journey</span>
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">Building reliable infrastructure and solving complex problems in production environments.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Feb 2023<span class="end-date">Dec 2024</span></div>
+                    <div class="exp-terminal-card">
+                        <div class="exp-terminal-header">
+                            <div class="terminal-buttons"><span class="terminal-btn red"></span><span class="terminal-btn yellow"></span><span class="terminal-btn green"></span></div>
+                            <span class="terminal-title">~/azilen/system-engineer</span>
+                        </div>
+                        <div class="exp-terminal-body">
+                            <span class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">cat</span> <span class="term-string">role.txt</span></span>
+                            <span class="term-line"><span class="term-key">Company</span>: <span class="term-value">Azilen Technologies</span></span>
+                            <span class="term-line"><span class="term-key">Role</span>: <span class="term-value">System Engineer - Cloud</span></span>
+                            <span class="term-line"><span class="term-key">Location</span>: <span class="term-value">MUmbai, India → Dublin, Ireland</span></span>
+                            <div class="impact-stats">
+                                <div class="impact-stat"><span class="impact-value">99.99%</span><span class="impact-label">Uptime</span></div>
+                                <div class="impact-stat"><span class="impact-value">3+</span><span class="impact-label">Migrations</span></div>
+                                <div class="impact-stat"><span class="impact-value">4</span><span class="impact-label">Installations</span></div>
+                                <div class="impact-stat"><span class="impact-value">IoT</span><span class="impact-label">Architecture</span></div>
+                            </div>
+                            <span class="term-heading"># Key Contributions</span>
+                            <span class="term-tree-item"><span class="term-tree">├──</span> Led OrbiWAN/OrbiWise network server installations</span>
+                            <span class="term-tree-item"><span class="term-tree">├──</span> Maintained <span class="term-highlight">99.99% uptime</span> for AWS EC2 infrastructure</span>
+                            <span class="term-tree-item"><span class="term-tree">├──</span> Provisioned Docker & Docker Swarm environments</span>
+                            <span class="term-tree-item"><span class="term-tree">├──</span> Managed PostgreSQL & Cassandra migrations</span>
+                            <span class="term-tree-item"><span class="term-tree">└──</span> Built monitoring with Prometheus & Grafana</span>
+                            <div class="exp-tech-stack">
+                                <span class="exp-tech-tag">AWS</span><span class="exp-tech-tag">Docker</span><span class="exp-tech-tag">Docker Swarm</span><span class="exp-tech-tag">Prometheus</span><span class="exp-tech-tag">Grafana</span><span class="exp-tech-tag">PostgreSQL</span><span class="exp-tech-tag">Cassandra</span><span class="exp-tech-tag">Redis</span><span class="exp-tech-tag">NGINX</span><span class="exp-tech-tag">Linux</span><span class="exp-tech-tag">Bash</span><span class="exp-tech-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item future">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025<span class="end-date">???</span></div>
+                    <div class="future-card">
+                        <div class="future-icon">🚀</div>
+                        <h3 class="future-title">Your Company Next?</h3>
+                        <p class="future-subtitle">Looking for DevOps/SRE roles where I can make an impact</p>
+                        <a href="#contact" class="future-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>Let's Connect</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS & BLOG SECTION -->
+        <section class="build-log-section" id="projects">
+            <div class="section-header">
+                <span class="section-label"><span>📂</span> Build Log</span>
+                <h2 class="section-title">Projects & Articles</h2>
+                <p class="section-subtitle">What I've built and what I've learned along the way.</p>
+            </div>
+            <div class="filter-bar">
+                <span class="filter-prompt">$</span>
+                <span class="filter-command">ls ~/work --filter=</span>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="project">🔨 Projects</button>
+                    <button class="filter-btn" data-filter="article">📝 Articles</button>
+                </div>
+            </div>
+            <div class="cards-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-type="project">
+                    <div class="visual-terminal">
+                        <span class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">az aks get-credentials</span> <span class="term-string">--name prod-cluster</span></span>
+                        <span class="term-line"><span class="term-output">Merged "prod-cluster" as current context</span></span>
+                        <span class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">helm upgrade</span> <span class="term-string">--install backend ./charts</span></span>
+                        <span class="term-line"><span class="term-success">✓ Release "backend" deployed</span></span>
+                        <span class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">kubectl get pods</span> <span class="term-string">-n production</span></span>
+                        <span class="term-line"><span class="term-output">backend-6d4f8b7c9-x2k4j   1/1   Running</span></span>
+                    </div>
+                    <div class="project-card-content">
+                        <span class="project-card-type project">🔨 Project</span>
+                        <h3 class="project-card-title">Azure-Based Microservices Deployment with Kubernetes</h3>
+                        <p class="project-card-desc">Microservices architecture using AKS and Helm charts with CI/CD workflows via Azure DevOps. Integrated monitoring with Azure Monitor and Cosmos DB.</p>
+                        <div class="project-card-tags"><span class="project-tag">AKS</span><span class="project-tag">Docker</span><span class="project-tag">Helm</span><span class="project-tag">Azure DevOps</span><span class="project-tag">Terraform</span><span class="project-tag">Python</span><span class="project-tag">Cosmos DB</span></div>
+                        <div class="project-card-footer">
+                            <div class="project-card-links">
+                                <a href="#" class="project-card-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a>
+                                <a href="#" class="project-card-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>Details</a>
+                            </div>
+                            <span class="project-card-meta">Scalable K8s</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card" data-type="project">
+                    <div class="visual-terminal">
+                        <span class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">terraform apply</span> <span class="term-string">-auto-approve</span></span>
+                        <span class="term-line"><span class="term-success">✓ Apply complete! Resources: 12 added</span></span>
+                        <span class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">docker stack deploy</span> <span class="term-string">-c compose.yml prod</span></span>
+                        <span class="term-line"><span class="term-success">✓ Creating service prod_api</span></span>
+                        <span class="term-line"><span class="term-success">✓ Creating service prod_prometheus</span></span>
+                        <span class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">curl</span> <span class="term-string">http://grafana:3000/health</span></span>
+                        <span class="term-line"><span class="term-success">{"status": "healthy"}</span></span>
+                    </div>
+                    <div class="project-card-content">
+                        <span class="project-card-type project">🔨 Project</span>
+                        <h3 class="project-card-title">Cloud-Native DevOps Infrastructure with Real-Time Monitoring</h3>
+                        <p class="project-card-desc">Production-ready AWS EC2 environment with Terraform automation, Docker Swarm orchestration for 6+ microservices, and Prometheus/Grafana observability pipeline.</p>
+                        <div class="project-card-tags"><span class="project-tag">AWS EC2</span><span class="project-tag">Docker Swarm</span><span class="project-tag">Terraform</span><span class="project-tag">Prometheus</span><span class="project-tag">Grafana</span><span class="project-tag">NGINX</span><span class="project-tag">PostgreSQL</span></div>
+                        <div class="project-card-footer">
+                            <div class="project-card-links">
+                                <a href="#" class="project-card-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub</a>
+                                <a href="#" class="project-card-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>Details</a>
+                            </div>
+                            <span class="project-card-meta">40% faster deploys</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog 1 -->
+                <div class="project-card" data-type="article">
+                    <div class="visual-gradient orange"><span class="series-badge">📚 Series</span><div class="gradient-content"><span class="gradient-icon">🔶</span><span class="gradient-badge">Learning in Public</span></div></div>
+                    <div class="project-card-content">
+                        <span class="project-card-type article">📝 Article</span>
+                        <h3 class="project-card-title">Learning AWS Through Real Projects</h3>
+                        <p class="project-card-desc">I'm learning AWS by implementing a series of small but realistic projects, each designed to explore a core cloud concept and the operational challenges that come with running systems in production.</p>
+                        <div class="project-card-tags"><span class="project-tag">AWS</span><span class="project-tag">Cloud</span><span class="project-tag">Learning</span><span class="project-tag">Projects</span></div>
+                        <div class="project-card-footer">
+                            <a href="blog.html" class="project-card-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>Read Article</a>
+                            <span class="read-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>10 min read</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Coming Soon Cards -->
+                <div class="project-card coming-soon" data-type="article">
+                    <div class="visual-gradient gray"><div class="gradient-content"><span class="gradient-icon">📊</span><span class="gradient-badge">Coming Soon</span></div></div>
+                    <div class="project-card-content">
+                        <span class="project-card-type article">📝 Article</span>
+                        <h3 class="project-card-title">Setting Up Prometheus & Grafana for Container Monitoring</h3>
+                        <p class="project-card-desc">A complete guide to implementing real-time monitoring and alerting for containerized applications with practical examples.</p>
+                        <div class="project-card-tags"><span class="project-tag">Prometheus</span><span class="project-tag">Grafana</span><span class="project-tag">Monitoring</span><span class="project-tag">Docker</span></div>
+                        <div class="project-card-footer"><span class="coming-soon-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Coming Soon</span><span class="read-time" style="visibility:hidden">-- min</span></div>
+                    </div>
+                </div>
+                <div class="project-card coming-soon" data-type="article">
+                    <div class="visual-gradient gray"><div class="gradient-content"><span class="gradient-icon">🐳</span><span class="gradient-badge">Coming Soon</span></div></div>
+                    <div class="project-card-content">
+                        <span class="project-card-type article">📝 Article</span>
+                        <h3 class="project-card-title">Docker Swarm vs Kubernetes: When to Use What</h3>
+                        <p class="project-card-desc">Comparing container orchestration tools based on real-world experience - complexity, learning curve, and use cases.</p>
+                        <div class="project-card-tags"><span class="project-tag">Docker Swarm</span><span class="project-tag">Kubernetes</span><span class="project-tag">Comparison</span></div>
+                        <div class="project-card-footer"><span class="coming-soon-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Coming Soon</span><span class="read-time" style="visibility:hidden">-- min</span></div>
+                    </div>
+                </div>
+                <div class="project-card coming-soon" data-type="article">
+                    <div class="visual-gradient gray"><div class="gradient-content"><span class="gradient-icon">🏗️</span><span class="gradient-badge">Coming Soon</span></div></div>
+                    <div class="project-card-content">
+                        <span class="project-card-type article">📝 Article</span>
+                        <h3 class="project-card-title">Terraform Best Practices I Learned the Hard Way</h3>
+                        <p class="project-card-desc">State management, module structure, and common pitfalls to avoid when starting with Infrastructure as Code.</p>
+                        <div class="project-card-tags"><span class="project-tag">Terraform</span><span class="project-tag">IaC</span><span class="project-tag">Best Practices</span></div>
+                        <div class="project-card-footer"><span class="coming-soon-badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>Coming Soon</span><span class="read-time" style="visibility:hidden">-- min</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact-section" id="contact">
+            <div class="section-header">
+                <span class="section-label"><span>📬</span> Get In Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Have a project in mind or just want to chat? I'd love to hear from you.</p>
+            </div>
+            <div class="contact-terminal-card">
+                <div class="contact-terminal-bar">
+                    <div class="terminal-buttons"><span class="terminal-btn red"></span><span class="terminal-btn yellow"></span><span class="terminal-btn green"></span></div>
+                    <span class="terminal-title">~/contact</span>
+                </div>
+                <div class="contact-terminal-body">
+                    <span class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">ping</span> <span class="term-string">apurva</span> --connect</span>
+                    <span class="term-line"><span class="term-output">→ Pinging apurva@dublin.ie...</span></span>
+                    <span class="term-line"><span class="term-success">✓ Connection established!</span></span>
+                    <span class="term-line"><span class="term-success">✓ Open to new opportunities</span></span>
+                    <span class="term-line"><span class="term-success">✓ Response time: < 24 hours</span></span>
+                </div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="status-card">
+                        <div class="status-header"><div class="status-indicator"></div><span class="status-text">Open to Opportunities</span></div>
+                        <p class="status-desc">I'm currently looking for DevOps/SRE roles where I can contribute to building reliable, scalable infrastructure. Remote or Dublin-based positions welcome!</p>
+                    </div>
+                    <div class="location-card">
+                        <div class="location-icon">📍</div>
+                        <div class="location-info"><h4>Based in Dublin, Ireland</h4><p>Available for remote & on-site roles</p></div>
+                    </div>
+                    <div class="social-card">
+                        <h4>Connect with me</h4>
+                        <div class="contact-social-links">
+                            <a href="mailto:apurva80125@gmail.com" class="contact-social-link">
+                                <div class="contact-social-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+                                <div class="contact-social-link-info"><div class="contact-social-link-name">Email</div><div class="contact-social-link-handle">apurva80125@gmail.com</div></div>
+                                <svg class="contact-social-link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/apurva-ghodekar-b26102198" target="_blank" class="contact-social-link">
+                                <div class="contact-social-link-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div>
+                                <div class="contact-social-link-info"><div class="contact-social-link-name">LinkedIn</div><div class="contact-social-link-handle">https://www.linkedin.com/in/apurva-ghodekar-b26102198</div></div>
+                                <svg class="contact-social-link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                            <a href="https://github.com/x23304995-Apurva" target="_blank" class="contact-social-link">
+                                <div class="contact-social-link-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></div>
+                                <div class="contact-social-link-info"><div class="contact-social-link-name">GitHub</div><div class="contact-social-link-handle">https://github.com/x23304995-Apurva</div></div>
+                                <svg class="contact-social-link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <a href="resume.pdf" download class="resume-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Download Resume</a> -->
+                </div>
+                <div class="contact-form-card">
+                    <div class="form-header"><h3>Send me a message</h3><p>Fill out the form below and I'll get back to you as soon as possible.</p></div>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group"><label class="form-label" for="name">Name <span>*</span></label><input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required></div>
+                            <div class="form-group"><label class="form-label" for="email">Email <span>*</span></label><input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required></div>
+                        </div>
+                        <div class="form-group"><label class="form-label" for="subject">Subject</label><input type="text" id="subject" name="subject" class="form-input" placeholder="What's this about?"></div>
+                        <div class="form-group"><label class="form-label" for="message">Message <span>*</span></label><textarea id="message" name="message" class="form-textarea" placeholder="Tell me about your project, opportunity, or just say hi..." required></textarea></div>
+                        <button type="submit" class="form-submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>Send Message</button>
+                        <p class="form-note">I typically respond within 24 hours</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <span class="footer-logo">~/apurva</span>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/x23304995-Apurva" aria-label="GitHub" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                <a href="https://www.linkedin.com/in/apurva-ghodekar-b26102198" aria-label="LinkedIn" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                <a href="mailto:apurva80125@gmail.com" aria-label="Email" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+            </div>
+            <p class="footer-copyright">© 2026 Apurva Ghodekar. Built with ☕ and code.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/contact-form.js"></script>
+</body>
+</html>
