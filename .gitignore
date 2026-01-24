@@ -9,3 +9,6 @@ terraform.tfvars
 
 # OS / Editor
 .DS_Store
+
+# AWS exported configs / experiments
+dist*.json
