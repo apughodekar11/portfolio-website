@@ -1,19 +1,6 @@
 # ============================================
 # GITHUB ACTIONS - AUTO DEPLOY TO AWS
 # ============================================
-# This workflow:
-#   1. Triggers on push to main branch
-#   2. Syncs website files to S3
-#   3. Invalidates CloudFront cache
-#
-# Setup required:
-#   1. Add these secrets to your GitHub repo:
-#      - AWS_ACCESS_KEY_ID
-#      - AWS_SECRET_ACCESS_KEY
-#      - AWS_REGION (e.g., eu-west-1)
-#      - S3_BUCKET (your bucket name)
-#      - CLOUDFRONT_DISTRIBUTION_ID
-
 name: Deploy Portfolio to AWS
 
 on:
@@ -21,7 +8,6 @@ on:
     branches:
       - main
     paths:
-      # Only deploy when website files change
       - 'index.html'
       - 'blog.html'
       - 'css/**'
@@ -29,8 +15,6 @@ on:
       - 'data/**'
       - 'assets/**'
       - '*.pdf'
-  
-  # Allow manual trigger
   workflow_dispatch:
 
 env:
@@ -39,18 +23,18 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
-      
+
       - name: Sync files to S3
         run: |
           aws s3 sync . s3://${{ secrets.S3_BUCKET }} \
@@ -60,30 +44,89 @@ jobs:
             --exclude "terraform/*" \
             --exclude "lambda/*" \
             --exclude "*.md" \
-            --exclude ".gitignore" \
-            --cache-control "public, max-age=31536000" \
-            --metadata-directive REPLACE
-          
-          # Set shorter cache for HTML files (so updates show faster)
-          aws s3 cp s3://${{ secrets.S3_BUCKET }} s3://${{ secrets.S3_BUCKET }} \
+            --exclude ".gitignore"
+
+      - name: Fix content types
+        run: |
+          # HTML files
+          aws s3 cp s3://${{ secrets.S3_BUCKET }}/ s3://${{ secrets.S3_BUCKET }}/ \
             --recursive \
             --exclude "*" \
             --include "*.html" \
+            --content-type "text/html" \
             --cache-control "public, max-age=0, must-revalidate" \
             --metadata-directive REPLACE
-          
-          # Set shorter cache for JSON data files
-          aws s3 cp s3://${{ secrets.S3_BUCKET }}/data s3://${{ secrets.S3_BUCKET }}/data \
+
+          # CSS files
+          aws s3 cp s3://${{ secrets.S3_BUCKET }}/ s3://${{ secrets.S3_BUCKET }}/ \
             --recursive \
+            --exclude "*" \
+            --include "*.css" \
+            --content-type "text/css" \
+            --cache-control "public, max-age=31536000" \
+            --metadata-directive REPLACE
+
+          # JavaScript files
+          aws s3 cp s3://${{ secrets.S3_BUCKET }}/ s3://${{ secrets.S3_BUCKET }}/ \
+            --recursive \
+            --exclude "*" \
+            --include "*.js" \
+            --content-type "application/javascript" \
+            --cache-control "public, max-age=31536000" \
+            --metadata-directive REPLACE
+
+          # JSON files
+          aws s3 cp s3://${{ secrets.S3_BUCKET }}/ s3://${{ secrets.S3_BUCKET }}/ \
+            --recursive \
+            --exclude "*" \
+            --include "*.json" \
+            --content-type "application/json" \
             --cache-control "public, max-age=300" \
             --metadata-directive REPLACE
-      
+
+          # PNG images
+          aws s3 cp s3://${{ secrets.S3_BUCKET }}/ s3://${{ secrets.S3_BUCKET }}/ \
+            --recursive \
+            --exclude "*" \
+            --include "*.png" \
+            --content-type "image/png" \
+            --cache-control "public, max-age=31536000" \
+            --metadata-directive REPLACE
+
+          # JPG images
+          aws s3 cp s3://${{ secrets.S3_BUCKET }}/ s3://${{ secrets.S3_BUCKET }}/ \
+            --recursive \
+            --exclude "*" \
+            --include "*.jpg" \
+            --include "*.jpeg" \
+            --content-type "image/jpeg" \
+            --cache-control "public, max-age=31536000" \
+            --metadata-directive REPLACE
+
+          # SVG images
+          aws s3 cp s3://${{ secrets.S3_BUCKET }}/ s3://${{ secrets.S3_BUCKET }}/ \
+            --recursive \
+            --exclude "*" \
+            --include "*.svg" \
+            --content-type "image/svg+xml" \
+            --cache-control "public, max-age=31536000" \
+            --metadata-directive REPLACE
+
+          # PDF files
+          aws s3 cp s3://${{ secrets.S3_BUCKET }}/ s3://${{ secrets.S3_BUCKET }}/ \
+            --recursive \
+            --exclude "*" \
+            --include "*.pdf" \
+            --content-type "application/pdf" \
+            --cache-control "public, max-age=31536000" \
+            --metadata-directive REPLACE
+
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
             --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
             --paths "/*"
-      
+
       - name: Deployment complete
         run: |
           echo "✅ Deployment complete!"
