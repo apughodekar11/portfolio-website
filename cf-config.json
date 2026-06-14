@@ -96,7 +96,7 @@
             "Quantity": 0
         },
         "FieldLevelEncryptionId": "",
-        "ResponseHeadersPolicyId": "80eaab73-0a75-4faa-91c3-04ca20efcabc",
+        "ResponseHeadersPolicyId": "78832d80-0f3e-4bb7-af84-4c2be6245b3d",
         "GrpcConfig": {
             "Enabled": false
         },
