@@ -12,3 +12,6 @@ terraform.tfvars
 
 # AWS exported configs / experiments
 dist*.json
+*.swp
+*_bak
+*.bak
